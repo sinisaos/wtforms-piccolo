@@ -1,0 +1,3 @@
+piccolo
+wtforms
+wtforms[email]
