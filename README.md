@@ -57,7 +57,7 @@ TaskForm = table_form(Task, only=['name', 'description'], field_args={
     }
 })
 ```
-# Example implementation for an edit view using Starlette web app:
+Example implementation for an edit view using Starlette web app:
 
 ```python
 # app.py
@@ -88,7 +88,7 @@ async def edit(request):
     )
 ```
 
-# Example template for above view using Jinja and Bootstrap:
+Example template for above view using Jinja and Bootstrap:
 
 ```html
 {% extends "base.html" %}

@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="wtforms-piccolo",
-    version="0.0.1",
+    name="wtforms_piccolo",
+    version="0.1.0",
     author="sinisaos",
     author_email="sinisaos@gmail.com",
     description="Form generation utilities for Piccolo ORM Table class",
