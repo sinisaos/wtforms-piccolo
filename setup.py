@@ -5,13 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="wtforms_piccolo",
-    version="0.1.1",
+    version="0.1.2",
     author="sinisaos",
     author_email="sinisaos@gmail.com",
     description="Form generation utilities for Piccolo ORM Table class",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/piccolo-orm/wtforms-piccolo",
+    url="https://github.com/sinisaos/wtforms-piccolo",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
