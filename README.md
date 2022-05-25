@@ -4,7 +4,7 @@ Based on the code found in [wtforms.ext](https://wtforms.readthedocs.io/en/2.3.x
 # Installation 
 
 ```bash
-pip install piccolo-wtforms
+pip install wtforms-piccolo
 ```
 # Usage
 
