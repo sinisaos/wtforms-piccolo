@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a class="btn btn-success" href="{{ url_for('create') }}"><i class="fa fa-plus"></i>
+  Create
+</a>
+<br><br>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        {% for field in field_name_list %}
+        <th>{{ field | title }}</th>
+        {% endfor %}
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in tasks %}
+      <tr>
+        {% for field in field_name_list %}
+        {% if field in fk_fields %}
+        <td>{{ item.readable | title }}</td>
+        {% else %}
+        <td>{{ item[field] }}</td>
+        {% endif %}
+        {% endfor %}
+        <td>
+          <a class="btn btn-success" href="{{ url_for('edit', id=item.id) }}"><i class="fa fa-edit"></i></a>
+          <a class="btn btn-danger"
+            onclick="return confirm('Are you sure you want to delete item? Deleting cannot be undone !!!');"
+            href="{{ url_for('delete', id=item.id) }}"><i class="fa fa-trash"></i></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% include 'pagination.html' %}
+</div>
+
+{% endblock %}

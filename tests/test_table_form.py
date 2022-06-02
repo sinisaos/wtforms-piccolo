@@ -71,7 +71,7 @@ class WTFPiccoloTestCase(TestCase):
                 "released": False,
                 "released_date": DateNow(),
                 "price": Decimal("0"),
-                "rating": None,
+                "rating": 0,
                 "book_author": None,
             },
         )

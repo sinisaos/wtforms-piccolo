@@ -115,3 +115,5 @@ Example template for above view using Jinja and Bootstrap:
 </main>
 {% endblock %}
 ```
+
+The full example of the Starlette web application is in example folder.

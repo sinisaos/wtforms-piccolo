@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Create {{ table_name | title }}</h2>
+<br>
+<form method="POST">
+    {% for field in form %}
+    <div class="form-group">
+        {{ field.label }}:
+        {{ field(class="form-control") }}
+        {% for error in field.errors %}
+        <span style="color: red;">*{{ error }}</span>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    <p><input class="btn btn-primary" type="submit" value="Submit"></p>
+</form>
+<br>
+
+{% endblock %}

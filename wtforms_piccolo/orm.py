@@ -1,6 +1,3 @@
-"""
-Form generation utilities for Piccolo ORM Table class.
-"""
 from __future__ import annotations
 
 import typing as t
@@ -12,6 +9,10 @@ from wtforms import fields as f
 from wtforms import validators
 from wtforms.validators import DataRequired
 
+"""
+Form generation utilities for Piccolo ORM Table class.
+"""
+
 
 def convert_IntField(
     table: t.Type[Table],
@@ -19,7 +20,7 @@ def convert_IntField(
     kwargs: t.Optional[dict] = None,
 ) -> f.IntegerField:
     """Returns a form field for a Integer column."""
-    return f.IntegerField()
+    return f.IntegerField(**kwargs)
 
 
 def convert_SmallIntField(
@@ -28,7 +29,7 @@ def convert_SmallIntField(
     kwargs: t.Optional[dict] = None,
 ) -> f.IntegerField:
     """Returns a form field for a SmallInt column."""
-    return f.IntegerField()
+    return f.IntegerField(**kwargs)
 
 
 def convert_BigIntField(
@@ -37,7 +38,7 @@ def convert_BigIntField(
     kwargs: t.Optional[dict] = None,
 ) -> f.IntegerField:
     """Returns a form field for a BigInt column."""
-    return f.IntegerField()
+    return f.IntegerField(**kwargs)
 
 
 def convert_CharField(
